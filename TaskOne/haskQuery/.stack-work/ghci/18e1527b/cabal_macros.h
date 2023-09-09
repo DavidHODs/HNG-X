@@ -30,16 +30,6 @@
   (major1) == 4 && (major2) <  17 || \
   (major1) == 4 && (major2) == 17 && (minor) <= 2)
 #endif /* MIN_VERSION_base */
-/* package haskQuery-0.1.0.0 */
-#ifndef VERSION_haskQuery
-#define VERSION_haskQuery "0.1.0.0"
-#endif /* VERSION_haskQuery */
-#ifndef MIN_VERSION_haskQuery
-#define MIN_VERSION_haskQuery(major1,major2,minor) (\
-  (major1) <  0 || \
-  (major1) == 0 && (major2) <  1 || \
-  (major1) == 0 && (major2) == 1 && (minor) <= 0)
-#endif /* MIN_VERSION_haskQuery */
 /* package servant-server-0.19.2 */
 #ifndef VERSION_servant_server
 #define VERSION_servant_server "0.19.2"
@@ -212,9 +202,15 @@
   (major1) == 2 && (major2) == 38 && (minor) <= 0)
 #endif /* MIN_TOOL_VERSION_strip */
 
+#ifndef CURRENT_PACKAGE_KEY
+#define CURRENT_PACKAGE_KEY "haskQuery-0.1.0.0-KrwxFH4QRhJv7U4WjWVfa"
+#endif /* CURRENT_packageKey */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskQuery-0.1.0.0-E36natlUlLsGJbC66JCEvo-haskQuery-exe"
+#define CURRENT_COMPONENT_ID "haskQuery-0.1.0.0-KrwxFH4QRhJv7U4WjWVfa"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
 #endif /* CURRENT_PACKAGE_VERSION */
+
+#undef CURRENT_PACKAGE_KEY
+#undef CURRENT_COMPONENT_ID

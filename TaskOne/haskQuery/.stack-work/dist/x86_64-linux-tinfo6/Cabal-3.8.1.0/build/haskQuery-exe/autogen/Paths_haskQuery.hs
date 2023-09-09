@@ -43,7 +43,7 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 bindir     = "/home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/install/x86_64-linux-tinfo6/c75c6faaaccecff3d94d1ea5a9ae1098b08553cc2b0fe4a5beb1b9a910b0daa8/9.4.6/bin"
-libdir     = "/home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/install/x86_64-linux-tinfo6/c75c6faaaccecff3d94d1ea5a9ae1098b08553cc2b0fe4a5beb1b9a910b0daa8/9.4.6/lib/x86_64-linux-ghc-9.4.6/haskQuery-0.1.0.0-GHIHSapJjWP3ZEiunkJvFq-haskQuery-exe"
+libdir     = "/home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/install/x86_64-linux-tinfo6/c75c6faaaccecff3d94d1ea5a9ae1098b08553cc2b0fe4a5beb1b9a910b0daa8/9.4.6/lib/x86_64-linux-ghc-9.4.6/haskQuery-0.1.0.0-E36natlUlLsGJbC66JCEvo-haskQuery-exe"
 dynlibdir  = "/home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/install/x86_64-linux-tinfo6/c75c6faaaccecff3d94d1ea5a9ae1098b08553cc2b0fe4a5beb1b9a910b0daa8/9.4.6/lib/x86_64-linux-ghc-9.4.6"
 datadir    = "/home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/install/x86_64-linux-tinfo6/c75c6faaaccecff3d94d1ea5a9ae1098b08553cc2b0fe4a5beb1b9a910b0daa8/9.4.6/share/x86_64-linux-ghc-9.4.6/haskQuery-0.1.0.0"
 libexecdir = "/home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/install/x86_64-linux-tinfo6/c75c6faaaccecff3d94d1ea5a9ae1098b08553cc2b0fe4a5beb1b9a910b0daa8/9.4.6/libexec/x86_64-linux-ghc-9.4.6/haskQuery-0.1.0.0"
