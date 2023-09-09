@@ -6,8 +6,7 @@ module Query(queryApplication) where
 
 import qualified Data.Text as T (Text, pack)
 import Data.Time (Day, UTCTime (utctDay), getCurrentTime)
-import Data.Aeson (ToJSON (toJSON), object, KeyValue (..))
-import Data.Aeson.Key (fromString)
+import Data.Aeson (ToJSON)
 import GHC.Generics (Generic)
 import Servant (Get, JSON, QueryParam, (:>), Handler, Server, Application, serve)
 import Control.Monad.IO.Class (liftIO)
@@ -23,30 +22,14 @@ data SuccessResponse = SuccessResponse {
     status_code :: Int
 } deriving (Show, Generic)
 
-instance ToJSON SuccessResponse where
-    toJSON successResponse =
-        object
-            [
-            fromString "slack_name" .= slack_name successResponse,
-            fromString "current_day" .= current_day successResponse,
-            fromString "utc_time" .= utc_time successResponse,
-            fromString "track" .= track successResponse,
-            fromString "github_file_url" .= github_file_url successResponse,
-            fromString "github_repo_url" .= github_repo_url successResponse,
-            fromString "status_code" .= status_code successResponse
-            ]
+instance ToJSON SuccessResponse 
 
 data ErrorResponse = ErrorResponse {
     errMsg :: T.Text,
     errCode :: Int
 } deriving (Show, Generic)
 
-instance ToJSON ErrorResponse where
-    toJSON errorResponse =
-        object
-            [ fromString "errMsg" .= errMsg errorResponse,
-              fromString "errCode" .= errCode errorResponse
-            ]
+instance ToJSON ErrorResponse 
 
 type QueryAPI = "hng-x" :> "taskone" :> QueryParam "name" T.Text :> QueryParam "track" T.Text :> Get '[JSON] (Either ErrorResponse SuccessResponse)
 
@@ -91,3 +74,4 @@ queryServer = Proxy
 
 queryApplication :: Application
 queryApplication = serve queryServer queryHandler
+
