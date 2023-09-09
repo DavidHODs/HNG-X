@@ -119,20 +119,20 @@
 ? /home/david/.stack/snapshots/x86_64-linux/991aab74ab7c47279b94d6f2dd18ce7ccb777c6b50031b881d5affced3984b00/9.4.6/lib/x86_64-linux-ghc-9.4.6/libHSwitherable-0.4.2-AK67JnZXDlz9Fujga9y9O4-ghc9.4.6.so
 : hash: 88297313f18b3e73ad0be3f3324e13f12c2d0cea342c82dec677579f14e34745
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/autogen/Paths_haskQuery.hs:
-  hash: 81bff477eebbdc9f6fbff9eb549cb645cb09f83beb3a64244beb252f4dc855ee
+  hash: ea722601619bb7759204b4be08d7b9f77fbd390979f1529872a0e1a68e7cde8d
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/autogen/cabal_macros.h:
-  hash: 0fa52a63511b54d3da8eff77194d826a59c2c38432ac3ba5c7f3dab1f424c6f4
+  hash: 041a2416ff7158c061bce4d6b5b31f8b2fb7fa130a763141e6227e0bf455d753
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/CHANGELOG.md:
   hash: bd5b6999cae40f1f4ba0acc0e121aa77569f3c279915b785374e89110a08f4d1
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/README.md:
   hash: bbd213b64e697320b773b7994ad8de1b21cb03197390f230408b489cf5ac1659
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/haskQuery.cabal:
-  hash: a6f768079ec28fb34c85aaaf6247b8cab58e8ff56e1db2842157cd90c770ab6c
+  hash: e3d1c18f9cb25bbc4f3daa8163b359741f3d4dcd06a87bdcf9c251c9bcae8f9c
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/package.yaml:
-  hash: cc48dee9d0649decc319aa772e11b31cc115a1790aff6c4f5315fe20a2ea9b11
+  hash: 724bc016fb4ac77427805bba084aae0718e9aa72fb48abe5062ef75890a587b6
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/src/Lib.hs:
   hash: 7ad063eecdb1e2199a5ec31d0a65a14d5c02677ead2e514975ea390689ca1eca
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/src/Query.hs:
-  hash: 261a8b5498af0380cf4e9ce949564c85b383b15d528baeaa39e641ce4055db88
+  hash: d86b6730a471e02cb433ee3d9df503d427610b1ce7a66c230cd8ef588db282ab
 /usr/include/stdc-predef.h:
   hash: cb08cd5d4cc059a90833ac48a284d25016e8d56ded8ad4cd98d8ac59cc5053f3

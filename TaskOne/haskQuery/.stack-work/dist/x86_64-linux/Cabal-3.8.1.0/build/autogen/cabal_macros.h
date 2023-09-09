@@ -30,6 +30,16 @@
   (major1) == 4 && (major2) <  17 || \
   (major1) == 4 && (major2) == 17 && (minor) <= 2)
 #endif /* MIN_VERSION_base */
+/* package bytestring-0.11.5.1 */
+#ifndef VERSION_bytestring
+#define VERSION_bytestring "0.11.5.1"
+#endif /* VERSION_bytestring */
+#ifndef MIN_VERSION_bytestring
+#define MIN_VERSION_bytestring(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  11 || \
+  (major1) == 0 && (major2) == 11 && (minor) <= 5)
+#endif /* MIN_VERSION_bytestring */
 /* package servant-server-0.19.2 */
 #ifndef VERSION_servant_server
 #define VERSION_servant_server "0.19.2"
@@ -203,10 +213,10 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_PACKAGE_KEY
-#define CURRENT_PACKAGE_KEY "haskQuery-0.1.0.0-KrwxFH4QRhJv7U4WjWVfa"
+#define CURRENT_PACKAGE_KEY "haskQuery-0.1.0.0-HvuSDRZlJ3NK062yuAUHmz"
 #endif /* CURRENT_packageKey */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskQuery-0.1.0.0-KrwxFH4QRhJv7U4WjWVfa"
+#define CURRENT_COMPONENT_ID "haskQuery-0.1.0.0-HvuSDRZlJ3NK062yuAUHmz"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

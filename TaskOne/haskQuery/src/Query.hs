@@ -2,7 +2,7 @@
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE DeriveGeneric #-}
 
-module Query() where
+module Query(queryApplication) where
 
 import qualified Data.Text as T (Text, pack)
 import Data.Time (Day, UTCTime (utctDay), getCurrentTime)
