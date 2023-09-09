@@ -1,5 +1,4 @@
 {-# LANGUAGE DataKinds #-}
-{-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE DeriveGeneric #-}
 
@@ -9,8 +8,9 @@ import qualified Data.Text as T (Text, pack)
 import Data.Time (Day, UTCTime (utctDay), getCurrentTime)
 import Data.Aeson (ToJSON)
 import GHC.Generics (Generic)
-import Servant (Get, JSON, QueryParam, (:>), Handler)
+import Servant (Get, JSON, QueryParam, (:>), Handler, Server, Application, serve)
 import Control.Monad.IO.Class (liftIO)
+import Data.Proxy ( Proxy(..) )
 
 data SuccessResponse = SuccessResponse {
     slack_name :: T.Text,
@@ -31,7 +31,7 @@ data ErrorResponse = ErrorResponse {
 
 instance ToJSON ErrorResponse
 
-type QueryAPI = "hng-x" :> "taskone" :> QueryParam "name" (Maybe T.Text) :> QueryParam "track" (Maybe T.Text) :> Get '[JSON] (Either ErrorResponse SuccessResponse)
+type QueryAPI = "hng-x" :> "taskone" :> QueryParam "name" T.Text :> QueryParam "track" T.Text :> Get '[JSON] (Either ErrorResponse SuccessResponse)
 
 queryEndpoint :: Maybe T.Text -> Maybe T.Text -> Handler (Either ErrorResponse SuccessResponse)
 queryEndpoint _slack_name _track = do
@@ -63,3 +63,14 @@ queryEndpoint _slack_name _track = do
                 github_repo_url = T.pack "https://github.com/DavidHODS/HNG-X",
                 status_code = 200
             }
+
+
+
+queryHandler :: Server QueryAPI
+queryHandler = queryEndpoint
+
+queryServer :: Proxy QueryAPI
+queryServer = Proxy
+
+queryApplication :: Application
+queryApplication = serve queryServer queryHandler

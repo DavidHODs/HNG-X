@@ -27,6 +27,7 @@ dependencies:
 - warp
 - text >= 2.0.2
 - time >= 1.12.2
+- bytestring >= 0.11.5.1
 
 ghc-options:
 - -Wall
