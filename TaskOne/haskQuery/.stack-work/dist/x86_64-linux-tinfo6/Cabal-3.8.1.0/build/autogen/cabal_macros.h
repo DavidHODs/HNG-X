@@ -20,6 +20,16 @@
   (major1) == 2 && (major2) <  1 || \
   (major1) == 2 && (major2) == 1 && (minor) <= 2)
 #endif /* MIN_VERSION_aeson */
+/* package aeson-pretty-0.8.9 */
+#ifndef VERSION_aeson_pretty
+#define VERSION_aeson_pretty "0.8.9"
+#endif /* VERSION_aeson_pretty */
+#ifndef MIN_VERSION_aeson_pretty
+#define MIN_VERSION_aeson_pretty(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  8 || \
+  (major1) == 0 && (major2) == 8 && (minor) <= 9)
+#endif /* MIN_VERSION_aeson_pretty */
 /* package base-4.17.2.0 */
 #ifndef VERSION_base
 #define VERSION_base "4.17.2.0"
@@ -213,10 +223,10 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_PACKAGE_KEY
-#define CURRENT_PACKAGE_KEY "haskQuery-0.1.0.0-HvuSDRZlJ3NK062yuAUHmz"
+#define CURRENT_PACKAGE_KEY "haskQuery-0.1.0.0-AoeGRAwCU01GtGIL0MBynv"
 #endif /* CURRENT_packageKey */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskQuery-0.1.0.0-HvuSDRZlJ3NK062yuAUHmz"
+#define CURRENT_COMPONENT_ID "haskQuery-0.1.0.0-AoeGRAwCU01GtGIL0MBynv"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

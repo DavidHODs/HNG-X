@@ -3,7 +3,7 @@
 ? /home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/haskQuery-exe/autogen/Paths_haskQuery.hs
 : hash: a811cca0e443c0ed589ee313ffb48430208195cf5678e5c3373f03baf5b9b7cc
 ? /home/david/Desktop/HNG-X/TaskOne/haskQuery/.stack-work/dist/x86_64-linux/Cabal-3.8.1.0/build/haskQuery-exe/autogen/cabal_macros.h
-: hash: 081b93781207f89d81703e69a7fc6e2a5aa9209600b1931e4824e9b24c62c432
+: hash: 904f85239f2b630ac07edc306a98543a9508f1410538d88923cc65e6f7b3ece8
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/CHANGELOG.md:
   hash: bd5b6999cae40f1f4ba0acc0e121aa77569f3c279915b785374e89110a08f4d1
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/README.md:
@@ -11,8 +11,8 @@
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/app/Main.hs:
   hash: 1896dee2175a4059f574c2791e0d64baa2560040fa046a9387a9d90ce855799c
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/haskQuery.cabal:
-  hash: e3d1c18f9cb25bbc4f3daa8163b359741f3d4dcd06a87bdcf9c251c9bcae8f9c
+  hash: 68eaf71758035c8f1606b1109eb56d7d5dfb75d87ec64bf685870aa8f8f467c9
 /home/david/Desktop/HNG-X/TaskOne/haskQuery/package.yaml:
-  hash: 724bc016fb4ac77427805bba084aae0718e9aa72fb48abe5062ef75890a587b6
+  hash: 416a818bf8768f7c467fc53bcf4375a0ebee0efd3a701a1c75032c4e1b451d37
 /usr/include/stdc-predef.h:
   hash: cb08cd5d4cc059a90833ac48a284d25016e8d56ded8ad4cd98d8ac59cc5053f3

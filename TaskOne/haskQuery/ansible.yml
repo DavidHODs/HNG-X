@@ -1,0 +1,15 @@
+#!/home/david/ansible/myansible/bin/ansible-playbook
+
+- name: HNG-X task one
+  hosts: aws_ec2
+  become: 'yes'
+  become_user: root
+
+  tasks:
+    - name: Copy folder with executable
+      copy:
+        src: ~/Downloads/Hask
+        dest: / 
+        mode: 0755                   
+        recurse: yes
+          
