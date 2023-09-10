@@ -8,9 +8,10 @@ import qualified Data.Text as T (Text, pack)
 import Data.Time (Day, UTCTime (utctDay), getCurrentTime)
 import Data.Aeson (ToJSON)
 import GHC.Generics (Generic)
-import Servant (Get, JSON, QueryParam, (:>), Handler, Server, Application, serve)
+import Servant (Get, JSON, QueryParam, (:>), Handler, Server, Application, serve, throwError, ServerError (..))
 import Control.Monad.IO.Class (liftIO)
 import Data.Proxy ( Proxy(..) )
+import qualified Data.ByteString.Lazy.Char8 as LBS
 
 data SuccessResponse = SuccessResponse {
     slack_name :: T.Text,
@@ -31,30 +32,32 @@ data ErrorResponse = ErrorResponse {
 
 instance ToJSON ErrorResponse 
 
-type QueryAPI = "hng-x" :> "api" :> QueryParam "slack_name" T.Text :> QueryParam "track" T.Text :> Get '[JSON] (Either ErrorResponse SuccessResponse)
+type QueryAPI = "hng-x" :> "api" :> QueryParam "slack_name" T.Text :> QueryParam "track" T.Text :> Get '[JSON] SuccessResponse
 
-queryEndpoint :: Maybe T.Text -> Maybe T.Text -> Handler (Either ErrorResponse SuccessResponse)
+errorHandler :: LBS.ByteString -> Handler a
+errorHandler msg = throwError err
+    where
+        err :: ServerError
+        err = ServerError {
+            errHTTPCode = 400,
+            errReasonPhrase = "bad request",
+            errBody = msg <> LBS.pack " track missing in query parameter",
+            errHeaders = []
+        }
+
+queryEndpoint :: Maybe T.Text -> Maybe T.Text -> Handler SuccessResponse
 queryEndpoint _slack_name _track = do
     case (_slack_name, _track) of
-        (Nothing, Nothing) -> return $ Left ErrorResponse {
-            errMsg = T.pack "bad request: slack name and track missing in query parameter",
-            errCode = 400
-        }
+        (Nothing, Nothing) -> errorHandler $ LBS.pack"slack_name and track"
 
-        (_, Nothing) -> return $ Left ErrorResponse {
-            errMsg = T.pack "bad request: track missing in query parameter",
-            errCode = 400
-        }
+        (_, Nothing) -> errorHandler $ LBS.pack "track"
 
-        (Nothing, _) -> return $ Left ErrorResponse {
-            errMsg = T.pack "bad request: slack name missing in query parameter",
-            errCode = 400
-        }
+        (Nothing, _) -> errorHandler $ LBS.pack "slack_name"
 
         (Just name, Just trk) -> do
             currentUTCTime <- liftIO getCurrentTime
             currentDay <- liftIO $ return (utctDay currentUTCTime)
-            return $ Right SuccessResponse {
+            return SuccessResponse {
                 slack_name = name,
                 current_day = currentDay,
                 utc_time = currentUTCTime,
@@ -63,8 +66,6 @@ queryEndpoint _slack_name _track = do
                 github_repo_url = T.pack "https://github.com/DavidHODS/HNG-X",
                 status_code = 200
             }
-
-
 
 queryHandler :: Server QueryAPI
 queryHandler = queryEndpoint
