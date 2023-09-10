@@ -31,7 +31,7 @@ data ErrorResponse = ErrorResponse {
 
 instance ToJSON ErrorResponse 
 
-type QueryAPI = "hng-x" :> "taskone" :> QueryParam "name" T.Text :> QueryParam "track" T.Text :> Get '[JSON] (Either ErrorResponse SuccessResponse)
+type QueryAPI = "hng-x" :> "api" :> QueryParam "slack_name" T.Text :> QueryParam "track" T.Text :> Get '[JSON] (Either ErrorResponse SuccessResponse)
 
 queryEndpoint :: Maybe T.Text -> Maybe T.Text -> Handler (Either ErrorResponse SuccessResponse)
 queryEndpoint _slack_name _track = do
