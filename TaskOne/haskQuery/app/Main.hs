@@ -4,7 +4,7 @@ import Query(queryApplication)
 import Network.Wai.Handler.Warp (run)
 
 port :: Int 
-port = 5050
+port = 80
 
 main :: IO ()
 main = do
